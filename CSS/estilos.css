@@ -1,0 +1,222 @@
+/*soft reset do css*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://images.tcdn.com.br/img/img_prod/560877/fundo_radial_degrade_raiado_mesclado_2_00_x_2_80_981_1_20190314134512.jpg');
+    background-size:100vh;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    font-size: 12px;
+  }
+
+  /* se a tela tiver pelo menos 400px vai carregar esses estilos */
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+  /* breakpoit*/
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+/* breakpoit*/
+ @media (min-width: 1200px) {
+  body {
+    font-size: 22px;
+    }
+  }
+  
+  header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .menu {
+    background-color: aquamarine;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+    background-color: aquamarine;
+    transition: background-color 1.5s, color 1.5s;
+  }
+
+  .menu a:active,
+  .menu a:hover {
+    background-color: darkred;
+    color: white;
+  }
+
+  a {
+    color: teal;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .titulo {
+    transform: scale(0.2) translateY(60vh);
+    opacity: 0;
+    animation: 1s linear 2s intro forwards;
+  }
+
+  @keyframes intro{
+
+    100% {
+   transform: scale(1) translateY(0);
+    opacity: 1;
+    }
+
+  
+  }
+
+  .site-subtitle,
+  .site-title {
+    text-align: center;
+    color: yellowgreen;
+  }
+
+  .site-title {
+    font-size: 4em;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .site-subtitle {
+    font-style: italic;
+    font-family: 'Indie Flower', cursive;
+    line-height: 1.8em;
+  }
+
+  .sobre h2,
+  .contato h2,
+  .portfolioo h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+
+  .sobre,
+  .contato,
+  .portfolioo {
+    padding: 2em;
+    min-height: 100vh;
+  }
+
+  .sobre .eu {
+    height: 813px;
+    width: 763px;
+    float: right;
+    margin-left: 2em;
+  }
+
+  .sobre .eu img {
+   
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  }
+  
+  @media (min-width 1200px) {
+    .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  }
+
+  .sobre p {
+    color: white;
+    margin-bottom: 1.4em;
+    text-indent: 1.4em;
+    text-align: justify;
+    font-family: 'Abril Fatface', cursive; 
+  }
+
+  .sobre a {
+    color: white;
+    text-decoration: overline;
+  }
+
+  .sobre a:hover {
+    background-color: yellowgreen;
+  }
+
+  .portfolioo .grid {
+    display: grid;
+    gap: 2em;
+  }
+
+  @media (min-width: 560px) {
+    .portfolioo .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .portfolioo .grid {
+      grid-template-columns: repeat(3, 260px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+
+  .portfolioo figure {
+    text-align: center;
+  }
+
+  .img-portfolio {
+    height: 180px;
+    width: 240px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    transition: transform 500ms;
+  }
+
+.img-portfolio:hover {
+  transform: scale(1.2) rotate(2deg);
+}
+
+  .contato .icons {
+    text-align: center;
+  }
+
+  .contato a {
+    color: whitesmoke;
+    font-size: 4em;
+    transition: text-shadow 0.5s;
+  }
+
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
